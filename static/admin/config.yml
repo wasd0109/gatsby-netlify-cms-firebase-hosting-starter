@@ -26,5 +26,7 @@ collections:
       - { name: title, label: Title }
       - { name: excerpt, label: Excerpt } # 抜粋
       - { name: slug, label: Slug }
+      - { name: hashtags, label: Hashtags }
+      - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: body, label: Body, widget: markdown }
       - { name: date, label: Date, widget: datetime }
