@@ -1,0 +1,31 @@
+backend:
+  # Githubをリモレポとして使います。
+  name: github
+  # Githubのレポ名 ({username}/{repo-name})
+  repo: wasd0109/gatsby-netlify-cms-firebase-hosting-starter
+  # Netlify-CMSのコンテンツブランチ名 ここでブランチ名はpublishingとします
+  branch: publishing
+# 画像などの静的アセットの保存先
+media_folder: content/assets
+# ビルドされたサイトでの静的アセット保存先
+public_folder: ../assets # これで静的アセットのアクセス先はwww.{ドメイン}/assets/{ファイル名}となります
+# データコレクション初期化
+collections:
+  # 'blogs'というコレクションを作ります
+  - name: blogs
+    label: Blogs
+    # ブログの保存先
+    folder: content/news
+    # ユーザー（自分）に新しいブログを作る権限を与える
+    create: true
+    # スラッグ
+    # スラッグのデフォルトはブログタイトルの名前になります。
+    # ブログタイトルがBlog about Gatsbyの場合、スラッグがblog-about-gatsbyとなります
+    # 日本語には対応していませんのでブログごとに自分でスラッグを設定します
+    # ブログのフィルード
+    fields:
+      - { name: title, label: Title }
+      - { name: excerpt, label: Excerpt } # 抜粋
+      - { name: slug, label: Slug }
+      - { name: body, label: Body, widget: markdown }
+      - { name: date, label: Date, widget: datetime }
