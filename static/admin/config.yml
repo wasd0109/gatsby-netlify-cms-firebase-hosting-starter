@@ -1,7 +1,6 @@
 backend:
-  # Githubをリモレポとして使います。
   name: github
-  # Githubのレポ名 ({username}/{repo-name})
+  # Githubのリポ名 ({username}/{repo-name})
   repo: wasd0109/gatsby-netlify-cms-firebase-hosting-starter
   # Netlify-CMSのコンテンツブランチ名 ここでブランチ名はpublishingとします
   branch: publishing
@@ -15,7 +14,7 @@ collections:
   - name: blogs
     label: Blogs
     # ブログの保存先
-    folder: content/news
+    folder: content/blogs
     # ユーザー（自分）に新しいブログを作る権限を与える
     create: true
     # スラッグ
